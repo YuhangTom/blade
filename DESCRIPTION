@@ -16,5 +16,5 @@ Suggests:
 Language: en-US
 Imports: 
     magrittr
-URL: https://github.com/YuhangTom/blade
+URL: https://github.com/YuhangTom/blade, https://yuhangtom.github.io/blade/
 BugReports: https://github.com/YuhangTom/blade/issues
