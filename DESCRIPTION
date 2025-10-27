@@ -1,0 +1,20 @@
+Package: blade
+Title: Tools for Analyzing Similarity Between Blades
+Version: 0.0.0.9000
+Authors@R: 
+    c(
+      person("Yuhang", "Lin", , "yhlin@iastate.edu", role = c("aut", "cre"), comment = c(ORCID = "0000-0002-3600-9889")),
+      person("Heike", "Hofmann", , "hhofmann4@unl.edu", role = "aut", comment = c(ORCID = "0000-0001-6216-5183"))
+    )
+Description: This `blade` package allows everyone to conduct reproducible automatic analysis to compare different blade scans in 'x3p' format. A conclusion for similarity or dissimilarity can be easily drawn based on the resulting cross-correlation.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.3
+Suggests: 
+    spelling
+Language: en-US
+Imports: 
+    magrittr
+URL: https://github.com/YuhangTom/blade
+BugReports: https://github.com/YuhangTom/blade/issues
