@@ -46,6 +46,47 @@ references:
   year: '2025'
   doi: 10.32614/CRAN.package.spelling
 - type: software
+  title: dbscan
+  abstract: 'dbscan: Density-Based Spatial Clustering of Applications with Noise (DBSCAN)
+    and Related Algorithms'
+  notes: Imports
+  url: https://github.com/mhahsler/dbscan
+  repository: https://CRAN.R-project.org/package=dbscan
+  authors:
+  - family-names: Hahsler
+    given-names: Michael
+    email: mhahsler@lyle.smu.edu
+    orcid: https://orcid.org/0000-0003-2716-1405
+  - family-names: Piekenbrock
+    given-names: Matthew
+  year: '2025'
+  doi: 10.32614/CRAN.package.dbscan
+- type: software
+  title: dplyr
+  abstract: 'dplyr: A Grammar of Data Manipulation'
+  notes: Imports
+  url: https://dplyr.tidyverse.org
+  repository: https://CRAN.R-project.org/package=dplyr
+  authors:
+  - family-names: Wickham
+    given-names: Hadley
+    email: hadley@posit.co
+    orcid: https://orcid.org/0000-0003-4757-117X
+  - family-names: François
+    given-names: Romain
+    orcid: https://orcid.org/0000-0002-2444-4226
+  - family-names: Henry
+    given-names: Lionel
+  - family-names: Müller
+    given-names: Kirill
+    orcid: https://orcid.org/0000-0002-1416-3412
+  - family-names: Vaughan
+    given-names: Davis
+    email: davis@posit.co
+    orcid: https://orcid.org/0000-0003-4777-038X
+  year: '2025'
+  doi: 10.32614/CRAN.package.dplyr
+- type: software
   title: magrittr
   abstract: 'magrittr: A Forward-Pipe Operator for R'
   notes: Imports
