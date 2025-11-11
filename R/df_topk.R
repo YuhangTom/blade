@@ -4,7 +4,7 @@
 #'
 #' @param data A alignment data frame with two columns: `lag` and `ccf`.
 #' @param k A positive integer to control the number of resulting local maximums.
-#' @param probs A value between 0 and 1 to control the data used for clustering.
+#' @param probs A value between 0 and 1 to control the data used for clustering. (XXX...Rephrase)
 #' @param len_block A positive number controlling the size of neighborhood.
 #' @return A data frame with three columns:
 #' * .cluster: The cluster id.
@@ -36,7 +36,13 @@ df_topk <- function(data, k = 10, probs = 0.5, len_block = 100) {
       ccf = max(ccf)
     )
 
-  tops %>%
-    arrange(desc(ccf)) %>%
-    slice(1:k)
+  if (is.numeric(k)) {
+    tops %>%
+      arrange(desc(ccf)) %>%
+      slice(1:k)
+  } else {
+    ### For infinity
+    tops %>%
+      arrange(desc(ccf))
+  }
 }

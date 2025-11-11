@@ -11,7 +11,7 @@ df_topk(data, k = 10, probs = 0.5, len_block = 100)
 
 \item{k}{A positive integer to control the number of resulting local maximums.}
 
-\item{probs}{A value between 0 and 1 to control the data used for clustering.}
+\item{probs}{A value between 0 and 1 to control the data used for clustering. (XXX...Rephrase)}
 
 \item{len_block}{A positive number controlling the size of neighborhood.}
 }
