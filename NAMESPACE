@@ -3,6 +3,7 @@
 export("%>%")
 export(df_topk)
 import(dplyr)
+import(ggplot2)
 importFrom(dbscan,augment)
 importFrom(dbscan,dbscan)
 importFrom(magrittr,"%>%")

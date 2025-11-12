@@ -4,14 +4,12 @@
 \alias{df_topk}
 \title{Top k clustered local maximums}
 \usage{
-df_topk(data, k = 10, probs = 0.5, len_block = 100)
+df_topk(data, k = 10, len_block = 100)
 }
 \arguments{
 \item{data}{A alignment data frame with two columns: \code{lag} and \code{ccf}.}
 
 \item{k}{A positive integer to control the number of resulting local maximums.}
-
-\item{probs}{A value between 0 and 1 to control the data used for clustering. (XXX...Rephrase)}
 
 \item{len_block}{A positive number controlling the size of neighborhood.}
 }
@@ -25,4 +23,14 @@ A data frame with three columns:
 }
 \description{
 This function uses density-based spatial clustering of applications with noise (DBSCAN) to get top k clustered local maximum from an alignment data frame.
+}
+\examples{
+library(ggplot2)
+topk <- df_topk(cors_df)
+cors_df \%>\%
+  ggplot(aes(x = lag, y = ccf)) +
+  geom_point() +
+  geom_point(aes(color = "topk"), data = topk) +
+  theme_bw()
+
 }
