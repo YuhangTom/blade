@@ -2,7 +2,7 @@ pandoc: 3.1.11
 pkgdown: 2.2.0
 pkgdown_sha: ~
 articles: {}
-last_built: 2025-11-12T00:13Z
+last_built: 2025-11-12T00:47Z
 urls:
   reference: https://yuhangtom.github.io/blade/reference
   article: https://yuhangtom.github.io/blade/articles

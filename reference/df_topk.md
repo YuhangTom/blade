@@ -7,7 +7,7 @@ data frame.
 ## Usage
 
 ``` r
-df_topk(data, k = 10, probs = 0.5, len_block = 100)
+df_topk(data, k = 10, len_block = 100)
 ```
 
 ## Arguments
@@ -19,11 +19,6 @@ df_topk(data, k = 10, probs = 0.5, len_block = 100)
 - k:
 
   A positive integer to control the number of resulting local maximums.
-
-- probs:
-
-  A value between 0 and 1 to control the data used for clustering.
-  (XXX...Rephrase)
 
 - len_block:
 
@@ -38,3 +33,16 @@ A data frame with three columns:
 - lag: The lag in the alignment.
 
 - ccf: The cross-correlation value in the alignment.
+
+## Examples
+
+``` r
+library(ggplot2)
+topk <- df_topk(cors_df)
+cors_df %>%
+  ggplot(aes(x = lag, y = ccf)) +
+  geom_point() +
+  geom_point(aes(color = "topk"), data = topk) +
+  theme_bw()
+
+```
