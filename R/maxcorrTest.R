@@ -14,7 +14,7 @@
 maxcorrTest <- function(sample, block, alpha = 0.05) {
   # the assumption is that the ccf is a series of successive values
   cors_df <- data.frame(lag = 1:length(sample), ccf = sample)
-  res <- acf(sample, lag.max = length(sample)-1)
+  res <- acf(sample, lag.max = length(sample)-1, plot = FALSE)
   min_block <- which(res$acf < 0)[1]
   if (block < min_block) {
     stop(sprintf("Minimal block length is larger than set block length (%d > %d)", min_block, block))
