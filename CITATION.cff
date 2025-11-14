@@ -87,6 +87,28 @@ references:
   year: '2025'
   doi: 10.32614/CRAN.package.dplyr
 - type: software
+  title: fitdistrplus
+  abstract: 'fitdistrplus: Help to Fit of a Parametric Distribution to Non-Censored
+    or Censored Data'
+  notes: Imports
+  url: https://lbbe-software.github.io/fitdistrplus/
+  repository: https://CRAN.R-project.org/package=fitdistrplus
+  authors:
+  - family-names: Delignette-Muller
+    given-names: Marie-Laure
+    email: marielaure.delignettemuller@vetagro-sup.fr
+    orcid: https://orcid.org/0000-0001-5453-3994
+  - family-names: Dutang
+    given-names: Christophe
+    email: christophe.dutang@ensimag.fr
+    orcid: https://orcid.org/0000-0001-6732-1501
+  - family-names: Siberchicot
+    given-names: Aurélie
+    email: aurelie.siberchicot@univ-lyon1.fr
+    orcid: https://orcid.org/0000-0002-7638-8318
+  year: '2025'
+  doi: 10.32614/CRAN.package.fitdistrplus
+- type: software
   title: ggplot2
   abstract: 'ggplot2: Create Elegant Data Visualisations Using the Grammar of Graphics'
   notes: Imports
@@ -141,6 +163,16 @@ references:
     email: hadley@posit.co
   year: '2025'
   doi: 10.32614/CRAN.package.magrittr
+- type: software
+  title: stats
+  abstract: 'R: A Language and Environment for Statistical Computing'
+  notes: Imports
+  authors:
+  - name: R Core Team
+  institution:
+    name: R Foundation for Statistical Computing
+    address: Vienna, Austria
+  year: '2025'
 - type: software
   title: 'R: A Language and Environment for Statistical Computing'
   notes: Depends

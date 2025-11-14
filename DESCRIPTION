@@ -17,8 +17,10 @@ Language: en-US
 Imports: 
     dbscan,
     dplyr,
+    fitdistrplus,
     ggplot2,
-    magrittr
+    magrittr,
+    stats
 URL: https://github.com/YuhangTom/blade, https://yuhangtom.github.io/blade/
 BugReports: https://github.com/YuhangTom/blade/issues
 Depends: 

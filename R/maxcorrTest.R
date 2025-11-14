@@ -5,6 +5,8 @@
 #' create larger number of local maxima but increase possible dependence.
 #' @param alpha significance value/acceptable level of Type 1 error.
 #' @returns object of class `htest` (hypothesis test)
+#' @importFrom fitdistrplus fitdist
+#' @importFrom stats acf dbeta qbeta
 #' @export
 #' @examples
 #' # for the example data both a test for the max and a test for the min
@@ -12,6 +14,8 @@
 #' maxcorrTest(cors_df$ccf, 100) # highly significant
 #' maxcorrTest(-cors_df$ccf, 100)  # not significant
 maxcorrTest <- function(sample, block, alpha = 0.05) {
+  ccf <- NULL
+
   # the assumption is that the ccf is a series of successive values
   cors_df <- data.frame(lag = 1:length(sample), ccf = sample)
   res <- acf(sample, lag.max = length(sample) - 1, plot = FALSE)
@@ -33,7 +37,7 @@ maxcorrTest <- function(sample, block, alpha = 0.05) {
   maxima <- maxima |> filter(!near(ccf, maxcorr))
   # max_density <- density(maxima$ccf)
 
-  beta_fit <- fitdistrplus::fitdist(maxima$ccf, "beta")
+  beta_fit <- fitdist(maxima$ccf, "beta")
   # summary(beta_fit)
   #
   # plot(beta_fit)
