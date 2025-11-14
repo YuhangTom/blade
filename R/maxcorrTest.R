@@ -5,6 +5,7 @@
 #' create larger number of local maxima but increase possible dependence.
 #' @param alpha significance value/acceptable level of Type 1 error.
 #' @returns object of class `htest` (hypothesis test)
+#' @export
 #' @examples
 #' # for the example data both a test for the max and a test for the min
 #' # CCF result in the expected outcome:
