@@ -33,7 +33,27 @@ object of class `htest` (hypothesis test)
 # for the example data both a test for the max and a test for the min
 # CCF result in the expected outcome:
 maxcorrTest(cors_df$ccf, 100) # highly significant
-#> Error in maxcorrTest(cors_df$ccf, 100): could not find function "maxcorrTest"
+#> 
+#>  Max Correlation test
+#> 
+#> data:  cors_df$ccf
+#> max CCF = 0.9264, block = 100, min block = 58, df = 68, shape1 =
+#> 3.2355, shape2 = 8.8875, p-value = 6.591e-07
+#> alternative hypothesis: The maximum correlation is significantly larger than expected.
+#> sample estimates:
+#> Max Correlation 
+#>       0.9263986 
+#> 
 maxcorrTest(-cors_df$ccf, 100)  # not significant
-#> Error in maxcorrTest(-cors_df$ccf, 100): could not find function "maxcorrTest"
+#> 
+#>  Max Correlation test
+#> 
+#> data:  -cors_df$ccf
+#> max CCF = 0.64286, block = 100, min block = 58, df = 72, shape1 =
+#> 2.2771, shape2 = 6.4768, p-value = 0.1521
+#> alternative hypothesis: The maximum correlation is significantly larger than expected.
+#> sample estimates:
+#> Max Correlation 
+#>       0.6428583 
+#> 
 ```

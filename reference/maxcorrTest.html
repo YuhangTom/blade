@@ -68,9 +68,29 @@ create larger number of local maxima but increase possible dependence.</p></dd>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co"># for the example data both a test for the max and a test for the min</span></span></span>
 <span class="r-in"><span><span class="co"># CCF result in the expected outcome:</span></span></span>
 <span class="r-in"><span><span class="fu">maxcorrTest</span><span class="op">(</span><span class="va">cors_df</span><span class="op">$</span><span class="va">ccf</span>, <span class="fl">100</span><span class="op">)</span> <span class="co"># highly significant</span></span></span>
-<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in maxcorrTest(cors_df$ccf, 100):</span> could not find function "maxcorrTest"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 	Max Correlation test</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> data:  cors_df$ccf</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> max CCF = 0.9264, block = 100, min block = 58, df = 68, shape1 =</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3.2355, shape2 = 8.8875, p-value = 6.591e-07</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> alternative hypothesis: The maximum correlation is significantly larger than expected.</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> sample estimates:</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Max Correlation </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       0.9263986 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-in"><span><span class="fu">maxcorrTest</span><span class="op">(</span><span class="op">-</span><span class="va">cors_df</span><span class="op">$</span><span class="va">ccf</span>, <span class="fl">100</span><span class="op">)</span>  <span class="co"># not significant</span></span></span>
-<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in maxcorrTest(-cors_df$ccf, 100):</span> could not find function "maxcorrTest"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 	Max Correlation test</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> data:  -cors_df$ccf</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> max CCF = 0.64286, block = 100, min block = 58, df = 72, shape1 =</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2.2771, shape2 = 6.4768, p-value = 0.1521</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> alternative hypothesis: The maximum correlation is significantly larger than expected.</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> sample estimates:</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Max Correlation </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       0.6428583 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>
