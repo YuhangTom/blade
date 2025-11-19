@@ -6,7 +6,7 @@
 #' @param alpha significance value/acceptable level of Type 1 error.
 #' @returns object of class `htest` (hypothesis test)
 #' @importFrom fitdistrplus fitdist
-#' @importFrom stats acf dbeta qbeta
+#' @importFrom stats acf pbeta qbeta
 #' @export
 #' @examples
 #' # for the example data both a test for the max and a test for the min
@@ -42,7 +42,7 @@ maxcorrTest <- function(sample, block, alpha = 0.05) {
   #
   # plot(beta_fit)
   DNAME <- deparse(substitute(sample))
-  p.value <- dbeta(maxcorr, shape1 = beta_fit$estimate[1], shape2 = beta_fit$estimate[2])
+  p.value <- pbeta(maxcorr, shape1 = beta_fit$estimate[1], shape2 = beta_fit$estimate[2], lower.tail = FALSE)
   Ca <- qbeta(alpha,
     shape1 = beta_fit$estimate[1],
     shape2 = beta_fit$estimate[2], lower.tail = FALSE
