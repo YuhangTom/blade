@@ -38,7 +38,7 @@ maxcorrTest(cors_df$ccf, 100) # highly significant
 #> 
 #> data:  cors_df$ccf
 #> max CCF = 0.9264, block = 100, min block = 58, df = 68, shape1 =
-#> 3.2355, shape2 = 8.8875, p-value = 6.591e-07
+#> 3.2355, shape2 = 8.8875, p-value = 5.557e-09
 #> alternative hypothesis: The maximum correlation is significantly larger than expected.
 #> sample estimates:
 #> Max Correlation 
@@ -50,7 +50,7 @@ maxcorrTest(-cors_df$ccf, 100)  # not significant
 #> 
 #> data:  -cors_df$ccf
 #> max CCF = 0.64286, block = 100, min block = 58, df = 72, shape1 =
-#> 2.2771, shape2 = 6.4768, p-value = 0.1521
+#> 2.2771, shape2 = 6.4768, p-value = 0.009194
 #> alternative hypothesis: The maximum correlation is significantly larger than expected.
 #> sample estimates:
 #> Max Correlation 
