@@ -42,7 +42,7 @@ maxcorrTest <- function(sample, block, alpha = 0.05) {
   #
   # plot(beta_fit)
   DNAME <- deparse(substitute(sample))
-  p.value <- pbeta(maxcorr, shape1 = beta_fit$estimate[1], shape2 = beta_fit$estimate[2], lower.tail = FALSE)
+  p.value <- 1 - (pbeta(maxcorr, shape1 = beta_fit$estimate[1], shape2 = beta_fit$estimate[2]))^(nrow(maxima) + 1)
   Ca <- qbeta(alpha,
     shape1 = beta_fit$estimate[1],
     shape2 = beta_fit$estimate[2], lower.tail = FALSE
